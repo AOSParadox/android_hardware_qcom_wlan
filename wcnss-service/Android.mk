@@ -48,7 +48,7 @@ LOCAL_SHARED_LIBRARIES += libqmiservices libqmi libqcci_legacy libqmi_client_qmu
 LOCAL_C_INCLUDES += $(TARGET_OUT_HEADERS)/libmdmdetect/inc
 LOCAL_SHARED_LIBRARIES += libmdmdetect
 
-LOCAL_CFLAGS += -DWCNSS_QMI
+LOCAL_CFLAGS += -DWCNSS_QMI -DMDM_DETECT
 LOCAL_SRC_FILES += wcnss_qmi_client.c
 
 LOCAL_MODULE := libwcnss_qmi
