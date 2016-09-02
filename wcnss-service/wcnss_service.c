@@ -400,7 +400,7 @@ unsigned int convert_string_to_hex(char* string)
 }
 
 
-#ifdef WCNSS_QMI
+#if defined(WCNSS_QMI) || defined(WCNSS_QMI_OSS)
 void setup_wcnss_parameters(int *cal, int nv_mac_addr)
 #else
 void setup_wcnss_parameters(int *cal)
@@ -790,7 +790,7 @@ int main(int argc, char *argv[])
 	UNUSED(argc), UNUSED(argv);
 	int rc;
 	int fd_dev, ret_cal;
-#ifdef WCNSS_QMI
+#if defined(WCNSS_QMI) || defined(WCNSS_QMI_OSS)
 	int nv_mac_addr = FAILED;
 #ifdef MDM_DETECT
 	struct dev_info mdm_detect_info;
@@ -871,7 +871,7 @@ nomodem:
 	dynamic_nv_replace();
 #endif
 
-#ifdef WCNSS_QMI
+#if defined(WCNSS_QMI) || defined(WCNSS_QMI_OSS)
 	setup_wcnss_parameters(&ret_cal, nv_mac_addr);
 #else
 	setup_wcnss_parameters(&ret_cal);
