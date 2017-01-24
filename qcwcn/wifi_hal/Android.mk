@@ -55,7 +55,8 @@ LOCAL_SRC_FILES := \
 	wifilogger_diag.cpp \
 	ring_buffer.cpp \
 	rb_wrapper.cpp \
-	rssi_monitor.cpp
+	rssi_monitor.cpp \
+	wifihal_vendor.cpp
 
 LOCAL_MODULE := libwifi-hal-qcom
 LOCAL_CLANG := true
@@ -113,7 +114,8 @@ LOCAL_SRC_FILES := \
 	wifilogger_diag.cpp \
 	ring_buffer.cpp \
 	rb_wrapper.cpp \
-	rssi_monitor.cpp
+	rssi_monitor.cpp \
+	wifihal_vendor.cpp
 
 LOCAL_MODULE := libwifi-hal-qcom
 LOCAL_CLANG := true
